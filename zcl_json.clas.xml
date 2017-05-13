@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_JSON</CLSNAME>
+    <VERSION>1</VERSION>
+    <LANGU>P</LANGU>
+    <DESCRIPT>JSON</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <CLSFINAL>X</CLSFINAL>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL/>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>CALL_CONVERSION_EXIT</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Chama rotina de conversão para valor</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>CLASS_CONSTRUCTOR</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>CLASS_CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>CR</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>CR (13)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>DATE_ISO_TO_SAP</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Converte uma data ISO-8601 para o formato SAP</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>DATE_SAP_TO_ISO</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Converte uma data SAP para o formato ISO-8601</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>DECODE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Decodifica uma string JSON para um objeto de dados novo</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>DECODE_ANYTHING</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Decodifica um objeto de dados genérico</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>DECODE_ARRAY</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Decodifica um array JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>DECODE_FIELD</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Decodifica um campo JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>DECODE_OBJECT</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Decodifica um objeto JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>DECODE_STRING</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Decodifica uma string JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>ENCODE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Codifica um objeto de dados para JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>ENCODE_ANYTHING</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Codifica um objeto de dados genérico para JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>ENCODE_FIELD</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Codifica um campo para JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>ENCODE_OBJECT</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Codifica um objeto ABAP para JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>ENCODE_STRUCTURE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Codifica uma estrutura para JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>ENCODE_TABLE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Codifica uma tabela para JSON</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>ESCAPE_STRING</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Converte um valor para um formato escapado</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>INCLUDE_EMPTY_VALUES</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Incluir elementos vazios (sem valor/iniciais).</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>LF</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>LF (10)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>LOWERCASE_NAMES</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Nomes em minúsculas</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>PRETTY_PRINT</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Devolver JSON formatado com indentação.</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>PRETTY_PRINT_JSON</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Formata uma string JSON para um formato indentado.</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>TIMESTAMP_ISO_TO_SAP</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Converte um timestamp ISO-8601 para o formato SAP</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>TIMESTAMP_SAP_TO_ISO</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Converte um timestamp SAP para o formato ISO-8601</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>TIME_ISO_TO_SAP</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Converte uma hora ISO-8601 para o formato SAP</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>TIME_SAP_TO_ISO</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Converte uma hora SAP para o formato ISO-8601</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_JSON</CLSNAME>
+     <CMPNAME>USE_CONVERSION_EXITS</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Utiliza conversão de campos ABAP</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
