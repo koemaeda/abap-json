@@ -506,6 +506,8 @@ method decode_string.
             append '"' to characters.
           when '\'.
             append '\' to characters.
+          when '/'.
+            append '/' to characters.
           when 'r'.
             append cr to characters.
           when 'n'.
