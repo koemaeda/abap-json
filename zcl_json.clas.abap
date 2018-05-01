@@ -140,6 +140,20 @@ private section.
     changing
       !POSITION type INT4
       value(STRING) type STRING .
+  methods DECODE_KEYWORD
+    importing
+      !JSON type CLIKE
+      !LENGTH type INT4
+    changing
+      !POSITION type INT4
+      value(STRING) type STRING .
+  methods DECODE_NUMBER
+    importing
+      !JSON type CLIKE
+      !LENGTH type INT4
+    changing
+      !POSITION type INT4
+      value(STRING) type STRING .
   methods CALL_CONVERSION_EXIT
     importing
       value(DIRECTION) type DIRECTION
@@ -331,6 +345,19 @@ method DECODE_ANYTHING.
           position = position
           value = value
       ).
+
+    when others.
+      "// begin keyword or number
+      decode_field(
+        exporting
+          name = name
+          json = json
+          length = length
+        changing
+          position = position
+          value = value
+      ).
+
   endcase.
 
   "// Check if object/array has just ended
@@ -391,7 +418,7 @@ method DECODE_ARRAY.
 endmethod.
 
 
-method DECODE_FIELD.
+method decode_field.
   data: abap_name type string,
         str_value type string,
         type type ref to cl_abap_typedescr,
@@ -403,14 +430,35 @@ method DECODE_FIELD.
   check position < length.
 
   "// Decode field value
-  decode_string(
-    exporting
-      json = json
-      length = length
-    changing
-      position = position
-      string = str_value
-  ).
+  case json+position(1).
+    when '"'. "// String
+      decode_string(
+        exporting
+          json = json
+          length = length
+        changing
+          position = position
+          string = str_value
+      ).
+    when 't' or 'f' or 'n'. "// Keyword
+      decode_keyword(
+        exporting
+          json = json
+          length = length
+        changing
+          position = position
+          string = str_value
+      ).
+    when others. "// Numbers
+      decode_number(
+        exporting
+          json = json
+          length = length
+        changing
+          position = position
+          string = str_value
+      ).
+  endcase.
 
   abap_name = name. translate abap_name to upper case.
   assign component abap_name of structure value to <field>.
@@ -448,6 +496,44 @@ method DECODE_FIELD.
         endif.
     endcase.
   endif.
+endmethod.
+
+
+method decode_keyword.
+  data: first_char type c.
+
+  first_char = json+position(1).
+  while position < length.
+    if json+position(1) na 'truefalsn'. "// true, false and null
+      exit.
+    endif.
+    add 1 to position.
+  endwhile.
+
+  case first_char.
+    when 't'. "// true
+      string = 'X'.
+    when 'f'. "// false
+      string = space.
+    when 'n'. "// null
+      string = ''.
+  endcase.
+endmethod.
+
+
+method decode_number.
+  data: characters type table of c.
+
+  while position < length.
+    if json+position(1) na '0123456789.+-eE'.
+      exit.
+    else.
+      append json+position(1) to characters.
+    endif.
+    add 1 to position.
+  endwhile.
+
+  concatenate lines of characters into string respecting blanks.
 endmethod.
 
 
